@@ -1,0 +1,21 @@
+spring:
+  main:
+    allow-bean-definition-overriding: false
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: create
+      use-new-id-generator-mappings: true
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
